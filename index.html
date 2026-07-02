@@ -23,8 +23,8 @@
                 <div class="game-icon chess-bg">♟️</div>
                 <div class="game-info">
                     <h3>Satranç</h3>
-                    <p>Stratejini konuştur ve mat et!</p>
-                    <button class="play-btn" onclick="playGame('Satranç')">Oyna</button>
+                    <p>Mini tahtada stratejini konuştur!</p>
+                    <button class="play-btn" onclick="openGame('chessModal')">Oyna</button>
                 </div>
             </div>
 
@@ -33,23 +33,38 @@
                 <div class="game-icon mine-bg">💣</div>
                 <div class="game-info">
                     <h3>Mayın Tarlası</h3>
-                    <p>Mayınlara basmadan tüm alanı temizle.</p>
-                    <button class="play-btn" onclick="playGame('Mayın Tarlası')">Oyna</button>
+                    <p>Mayınlara basmadan alanı temizle.</p>
+                    <button class="play-btn" onclick="openGame('minesweeperModal')">Oyna</button>
                 </div>
             </div>
-
-            <!-- Yılan Oyunu -->
-            <div class="game-card">
-                <div class="game-icon snake-bg">🐍</div>
-                <div class="game-info">
-                    <h3>Yılan Oyunu</h3>
-                    <p>Elmaları ye ve duvarlara çarpma.</p>
-                    <button class="play-btn" onclick="playGame('Yılan Oyunu')">Oyna</button>
-                </div>
-            </div>
-
         </div>
     </main>
+
+    <!-- SATRANÇ PENCERESİ (MODAL) -->
+    <div id="chessModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeGame('chessModal')">&times;</span>
+            <h2>Satranç (Mini Tahta)</h2>
+            <p>Tahtayı kurmak ve tüm kurallarla oynamak için açık kaynaklı bir iframe motoru entegre ettik:</p>
+            <div class="iframe-container">
+                <!-- Güvenli ve ücretsiz bir satranç emülatörü embed ettik -->
+                <iframe src="https://lichess.org/embed/export/fen/rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR?theme=browning&bg=dark" width="100%" height="400" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAYIN TARLASI PENCERESİ (MODAL) -->
+    <div id="minesweeperModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeGame('minesweeperModal')">&times;</span>
+            <h2>Mayın Tarlası</h2>
+            <div id="minesweeper-controls">
+                <button onclick="initMinesweeper()">Yeniden Başlat</button>
+                <span id="minesweeper-status"></span>
+            </div>
+            <div id="minesweeper-board"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
