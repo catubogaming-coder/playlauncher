@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Launcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">🎮 Play Launcher</div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Oyun ara...">
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Oyun Kütüphanesi</h2>
+        <div class="game-grid" id="gameGrid">
+            
+            <!-- Satranç -->
+            <div class="game-card">
+                <div class="game-icon chess-bg">♟️</div>
+                <div class="game-info">
+                    <h3>Satranç</h3>
+                    <p>Stratejini konuştur ve mat et!</p>
+                    <button class="play-btn" onclick="playGame('Satranç')">Oyna</button>
+                </div>
+            </div>
+
+            <!-- Mayın Tarlası -->
+            <div class="game-card">
+                <div class="game-icon mine-bg">💣</div>
+                <div class="game-info">
+                    <h3>Mayın Tarlası</h3>
+                    <p>Mayınlara basmadan tüm alanı temizle.</p>
+                    <button class="play-btn" onclick="playGame('Mayın Tarlası')">Oyna</button>
+                </div>
+            </div>
+
+            <!-- Yılan Oyunu -->
+            <div class="game-card">
+                <div class="game-icon snake-bg">🐍</div>
+                <div class="game-info">
+                    <h3>Yılan Oyunu</h3>
+                    <p>Elmaları ye ve duvarlara çarpma.</p>
+                    <button class="play-btn" onclick="playGame('Yılan Oyunu')">Oyna</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
